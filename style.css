@@ -24,6 +24,8 @@ body{
 }
 
 img{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -56,7 +58,6 @@ h2{
 .search > i, input, button{
     border: 0;
     padding: 0.8rem;
-    height: 100%;
 }
 
 .search > i{
@@ -287,9 +288,10 @@ section > h2 {
 
 .section--popular{
     background-color: var(--color-grey);
-    margin: 0;
-    padding: 30px 0 0 0;
+    margin: 0 0 2rem 0;
+    padding: 30px 0 1rem 0;
 }
+
 
 .block__title--popular > i{
     margin-right: 40px;
@@ -340,7 +342,7 @@ footer > div > ul > li > a{
     margin: 0;
     padding: 5px;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     z-index: 2;
 }
 
@@ -357,13 +359,14 @@ footer > div > ul > li > a{
     width: 100%;
     height: 150px;
     overflow: hidden;
-    border-radius: 20px 0px 0px 20px;
+    border-radius: 20px 20px 0px 0px;
     background-color: white;
     margin: 0;
 }
 
 .images__container--popular{
     width: 250px;
+    border-radius: 20px 0px 0px 20px;
 }
 
 header > p, h1, form, div {
@@ -384,9 +387,13 @@ header > form{
     margin-top: 20px;
 }
 
-section > h2, a, p {
+section > h2, a {
     margin-left : 20px;
     padding-right : 20px;
+}
+
+.paragraphe__more{
+    margin-left : 20px;
 }
 
 section > p {
@@ -444,6 +451,10 @@ section > p {
     color: black;
 }
 
+.menu > li:nth-child(1) > img {
+    width: 80px;
+}
+
 
 @media screen and (min-width: 769px) {
     .menu{  
@@ -456,10 +467,7 @@ section > p {
         width: 160px;
         text-align: center;
         padding: 0;
-    }
-
-    .menu > li:nth-child(1){
-        text-align: inherit;
+        font-size: .88rem;
     }
 
     .menu > li:nth-child(2) {
@@ -478,8 +486,11 @@ section > p {
         border-top: 3px solid var(--color-grey);
     }
     
+    header > h1 {
+        margin-bottom: 0.5rem;
+    }
     .search{
-        width: 34%;
+        width: 31%;
     }
 
 
@@ -487,29 +498,50 @@ section > p {
         width: 40%;
         border-radius: 0 10px 10px 0;
     }
+    .search > input::placeholder{
+        font-size: 0.9rem;
+    }
 
-    .search > button::after {
+    .search > button:before {
         content: 'Rechercher';
         font-family: "Raleway-bold", Arial, Helvetica, sans-serif;
         color: white;
         width: 100%;
     }
-    
-    .fa-search{
-        display: none;
+
+    .search > i, input, button {
+        padding: 0.6rem;
     }
     
+  
+    .filters__block {
+        margin-top: 1.4rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .filters__title {
+        margin: 0;
+        margin-right: 2rem;
+    }
+
+    .filters__buttons > div {
+        margin-right: 1.5rem;    
+    }
+
+    .resultats__nbr{
+        margin-bottom: 0;
+    }
    
     body{
     display: grid;
     grid-template-rows: repeat(4, auto);
-    grid-template-columns: 8fr 2fr;
+    grid-template-columns: 65% 35%;
     grid-template-areas: 
     "header header"
     "hebergements populaires"
     "activites activites"
     "footer footer";
-    column-gap: 30px;
     row-gap: 30px;
    }
 
@@ -526,6 +558,19 @@ section > p {
     grid-area: header;  
    }
 
+     header > h1 {
+    font-size: 1.1rem;
+    }
+
+    section > h2 {
+        font-size: 1.05rem;
+    }
+
+    section > div > h2 {
+        font-size: 1.05rem;
+    }
+
+
    .section--popular{
     grid-area: populaires;
     border-radius: 20px;
@@ -533,15 +578,41 @@ section > p {
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
+    margin-right: 20px;
+   }
+
+   .images__container--popular, .card--popular {
+       height: 120px;
+   }
+
+   .card__sub > h3 {
+       font-size: 0.8rem;
+   }
+
+   .card__sub > div > h3 {
+    font-size: 0.8rem;
+    }
+
+   .card__sub > p {
+    font-size: 0.7rem;
+    }
+
+    .card__sub > div > p {
+        font-size: 0.7rem;
+        }
+
+   .section--popular, .section--hebergements {
+    margin-bottom: 0;
    }
 
    .section--hebergements{
+    margin-right: 30px;
     grid-area: hebergements; 
     background-color: var(--color-grey); 
     border-radius: 20px;
     padding: 20px;
     display: grid;
-    grid-template-rows: 0.3fr 1fr 1fr;
+    grid-template-rows: 0.15fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
     "top top top"
@@ -579,13 +650,19 @@ section > p {
 
     .section--hebergements > a > div > div > img {
        border-radius: 20px 20px 0 0;
-       height: 100%;
-       object-fit: cover;
+    }
+
+    .section--hebergements > a > div > .images__container {
+        height: 100px;
+        
+     }
+
+     
+    section > p {
+    margin-bottom: 0rem;
     }
 
 
-
-    
 
     section > h2, a {
         margin: 0;
@@ -597,6 +674,11 @@ section > p {
         padding: 0;
     }
 
+    body > header {
+            margin-bottom: 0;
+    }
+ 
+
  
 
 
@@ -605,10 +687,10 @@ section > p {
     
     .section--activites{
         display: grid;
-        grid-template-rows: 40px 160px  30px 130px;
+        grid-template-rows: 40px 140px  20px 120px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        column-gap: 20px;
-        row-gap: 20px;
+        column-gap: 30px;
+        row-gap: 30px;
     }
 
 
@@ -658,17 +740,11 @@ section > p {
 
     .section--activites > a > div > div > img {
         width: 100%;
+        height: 100%;
         object-fit: cover;
     }
 
 
-
-
-    .section--activites > a:nth-child(3) > div > div 
-    > img {
-        width: 100%;
-        object-fit: cover;
-    }
 
 
 
@@ -704,6 +780,9 @@ section > p {
         width: 33%
     }
 
+    .search > button > i {
+        display: none;
+    }
  
 
 }
