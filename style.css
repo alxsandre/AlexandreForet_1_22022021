@@ -116,7 +116,14 @@ h1{
 }
 
 .filters__buttons > div > button:focus{
-    outline-width: 0; 
+    outline-width: 0;
+}
+
+.filters__buttons > div > button:hover{
+    cursor: pointer;
+    background-color: var(--color-blue);
+    color: white;
+    transition: color .25s;
 }
 
 .filters__buttons > div > button > i {
@@ -130,6 +137,8 @@ h1{
     justify-content: center;
     position: relative;
   }
+
+
 
   .filters__buttons > div > button > span {
     margin: 8px;
@@ -338,6 +347,11 @@ header > h1{
     margin-top: 30px;
 }
 
+header > h1 {
+    font-size: 1.4rem;
+}
+
+
 header > form{
     margin-top: 20px;
 }
@@ -386,7 +400,6 @@ section > h2, a {
 }
 
 
-
 @media screen and (min-width: 769px) {
     .menu{  
         display: grid;
@@ -407,7 +420,7 @@ section > h2, a {
     .menu > li:nth-child(2) {
         order: 4;
         padding-left: 0px;
-
+        padding: 25px 25px 15px 25px;
     }
     
     .menu > li:nth-child(3),  li:nth-child(4):hover{
@@ -418,6 +431,22 @@ section > h2, a {
     .menu > li:nth-child(4){
         border-bottom: 0;
         border-top: 3px solid var(--color-grey);
+    }
+    
+
+    .search > button {
+        width: 30%;
+        border-radius: 0 10px 10px 0;
+    }
+
+    .search > button::after {
+        content: 'Rechercher';
+        color: white;
+        width: 100%;
+    }
+    
+    .fa-search{
+        display: none;
     }
     
    
@@ -518,6 +547,7 @@ section > h2, a {
         padding: 0;
     }
 
+ 
 
 
 
@@ -612,21 +642,18 @@ section > h2, a {
  
     footer{
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
     }
 
     footer > div:nth-child(1){
         padding-top: 0px;
+        margin-left: 2rem;
     }
     
-
-
-
+    footer > div {
+        width: 33%
+    }
 
  
 
-
-    
-
 }
-
