@@ -37,11 +37,16 @@ ul{
 }
 
 h1{
-    font-family: "Raleway-bold", Arial, Helvetica, sans-serif;
+    font-family: "Raleway-bold", Arial, sans-serif;
+}
+
+h2{
+    margin-top: .4rem;
+    margin-bottom: .4rem;
 }
 
 .search{
-    width: 50%;
+    width: 90%;
     display: flex;
     justify-content: space-around;
     border: solid var(--color-grey) 2px;
@@ -50,11 +55,13 @@ h1{
 
 .search > i, input, button{
     border: 0;
+    padding: 0.8rem;
+    height: 100%;
 }
 
 .search > i{
-    width: 36px;
-    height: 26px;
+    width: 3.1rem;
+    height: 100%;
     background-color: var(--color-grey);
     display: flex;
     align-items: center;
@@ -75,12 +82,13 @@ h1{
 .search > input::placeholder{
     color: black; 
     font-family: "Raleway-bold", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
 }
 
 .search > button {
-    width: 26px;
-    height: 26px;
-    border-radius: 30%;
+    width: 3.1rem;
+    height: 100%;
+    border-radius: 20%;
     background-color: var(--color-blue)
 }
 
@@ -89,8 +97,10 @@ h1{
 }
 
 .filters__title{
-    font-family: "Raleway-bold", Arial, Helvetica, sans-serif;
-    margin-top: 27px;
+    font-family: "Raleway-bold", Arial, sans-serif;
+    margin-top: 1.68rem;
+    margin-bottom: .5rem;
+    font-size: 1.14rem;
 }
 
 .filters__buttons{
@@ -113,6 +123,8 @@ h1{
   background-color: white;
   margin: 1px;
   padding: 0;
+  height: 40px;
+  position: relative;
 }
 
 .filters__buttons > div > button:focus{
@@ -135,7 +147,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: absolute;
   }
 
 
@@ -144,6 +156,8 @@ h1{
     margin: 8px;
     padding-right: 3px;
     font-family: "Raleway-bold", Arial, Helvetica, sans-serif;
+    margin-left: 45px;
+    font-size: 0.9rem;
   }
 
 .fa-money-bill-wave, .fa-child, .fa-heart, .fa-dog{
@@ -152,8 +166,9 @@ h1{
 
 .resultats__nbr{
     display: flex;
-    margin-top: 25px;
-
+    align-items: flex-start;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .resultats__nbr > div {
@@ -170,16 +185,16 @@ h1{
     height: 20px;
 }
 
-.resultats__nbr > p{
-    position: relative;    
-    top: -15px;
-    padding-left: 8px;
-}
 
 .fa-info{
     color: var(--color-blue);
     font-size: 12px;
 }
+
+.resultats__nbr > p {
+    margin-left: 0.5rem;
+}
+
 
 
 
@@ -245,6 +260,18 @@ section > h2 {
     margin: 2px 0 0 5px;
 }
 
+.stars--5 > i:nth-child(5) {
+    color: var(--color-blue);
+}
+
+.stars--4  > i:nth-child(5) {
+    color: var(--color-grey);
+}
+
+.stars--3 > i:nth-child(4), i:nth-child(5) {
+    color: var(--color-grey);
+}
+
 .block__title{
     display:flex;
     align-items: center;
@@ -261,8 +288,9 @@ section > h2 {
 .section--popular{
     background-color: var(--color-grey);
     margin: 0;
-    padding: 0;
+    padding: 30px 0 0 0;
 }
+
 .block__title--popular > i{
     margin-right: 40px;
 }
@@ -356,9 +384,16 @@ header > form{
     margin-top: 20px;
 }
 
-section > h2, a {
+section > h2, a, p {
     margin-left : 20px;
     padding-right : 20px;
+}
+
+section > p {
+    font-family: "Raleway-bold", Helvetica, sans-serif;
+    font-size: 1.1rem;
+    margin-top: .8rem;
+    margin-bottom: 3rem;
 }
 
 
@@ -378,12 +413,18 @@ section > h2, a {
     padding-top: 20px;
 }
 
+
+.menu > li > a {
+   text-decoration: none;
+   color: var(--color-blue);
+}
+
 .menu > li:nth-child(1){
     padding-right: 50px;
 }
 
 .menu > li:nth-child(2){
-    padding-left: 20px;
+    padding-left: 60px;
     color: var(--color-blue);
     font-family: "Raleway-bold", Arial, Helvetica, sans-serif;
 }
@@ -397,6 +438,10 @@ section > h2, a {
 .menu > li:nth-child(4){
     padding: 25px 25px 15px 25px;
     border-bottom: 3px solid var(--color-grey);
+}
+
+.menu > li:nth-child(4) > a {
+    color: black;
 }
 
 
@@ -433,14 +478,19 @@ section > h2, a {
         border-top: 3px solid var(--color-grey);
     }
     
+    .search{
+        width: 34%;
+    }
+
 
     .search > button {
-        width: 30%;
+        width: 40%;
         border-radius: 0 10px 10px 0;
     }
 
     .search > button::after {
         content: 'Rechercher';
+        font-family: "Raleway-bold", Arial, Helvetica, sans-serif;
         color: white;
         width: 100%;
     }
