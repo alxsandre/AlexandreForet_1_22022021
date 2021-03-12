@@ -256,6 +256,10 @@ section > h2 {
     margin: 0 0 5px;
 }
 
+.fa-star {
+    font-size: 0.8rem;
+}
+
 .stars{
     color: var(--color-blue);
     margin: 2px 0 0 5px;
@@ -625,6 +629,10 @@ section > p {
    .section--activites{
     grid-area: activites;  
    }
+   .section--activites > h2 {
+       position: relative;
+       top: 25px;
+   }
 
    footer{
     grid-area: footer;  
@@ -785,4 +793,10 @@ section > p {
     }
  
 
+}
+
+@media screen and (min-width: 769px) and (max-width: 892px) {
+    .images__container--popular, .card--popular {
+        height: 140px;       
+    }
 }
