@@ -16,7 +16,6 @@ body {
   font-family: "Raleway-Medium", Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   --color-blue: #0065fc;
   --color-ligt-blue: #deebff;
   --color-grey: #f2f2f2;
